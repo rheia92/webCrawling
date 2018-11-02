@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>태그 횟수 분석 결과</title>
+</head>
+<style>
+    body {
+        background-color: #f5f5f5;
+        position: relative;
+        margin-top: 40px;
+    }
+
+
+</style>
+
+<h1>Instagram Tag Info</h1>
+
+<ul>
+    <li>Search Tag Name : {{ searchTag }}</li>
+    <p style="font-size:8px; font-weight:bold; color:darkred">단, 게시물이 많은 태그인 경우 받아오는 데이터 수에 제한을 두었음.</p>
+</ul>
+
+
+<table style="border:1px solid gray">
+    <thead>
+    <tr style="background-color: #5b3279;color: gainsboro;">
+        <th>태그</th>
+        <th>빈도수</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for d in data %}
+        <tr>
+            <td>{{ d.tag }}</td>
+            <td>{{ d.cnt }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</html>

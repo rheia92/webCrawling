@@ -1,0 +1,18 @@
+<h1>HELLO</h1>
+
+
+
+<table style="border:1px solid gray">
+    <thead>
+        <th>태그</th>
+        <th>빈도수</th>
+    </thead>
+    <tbody>
+        {%  for d in data %}
+        <tr>
+            <td>{{ d.tag }}</td>
+            <td>{{ d.cnt }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
